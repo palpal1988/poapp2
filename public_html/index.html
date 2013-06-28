@@ -1,40 +1,87 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>POAPP2</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<link rel="shortcut icon" href="img/favicon.ico" />
+<link rel="stylesheet" href="css/main.css">
+<!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+<![endif]-->
+</head>
+<body>
+<!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
 
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
+<div id="wrapper">
+	<div id="contents">
+		<div id="menu">
+			<header>
+				<div class="logo">
+					<a href=""><img src="img/logo.png" alt="logo" width="" height="" /></a>
+				</div>
+			</header>
+			<nav>
+				<ul id="tab">
+					<li class="select">性別</li>
+					<li>職業</li>
+					<li>年齢</li>
+					<li>目的</li>
+					<li>人数</li>
+					<li>誰と</li>
+					<li>エリア</li>
+				</ul>
+			</nav>
+			<div class="search">
+				<input type="submit" value="SEARCH" />
+			</div>
+		</div>
+		<div class="content_wrap">
+			<h2>性別</h2>
+			<img src="img/test1.jpg" />
+		</div>
+		<div class="content_wrap disnon">
+			<h2>職業</h2>
+			<img src="img/test2.jpg" />
+		</div>
+		<div class="content_wrap disnon">
+			<h2>年齢</h2>
+			<img src="img/test3.jpg" />
+		</div>
+		<div class="content_wrap disnon">
+			<h2>目的</h2>
+			<img src="img/test4.jpg" />
+		</div>
+		<div class="content_wrap disnon">
+			<h2>人数</h2>
+			<img src="img/test5.jpg" />
+		</div>
+		<div class="content_wrap disnon">
+			<h2>誰と</h2>
+			<img src="img/test6.jpg" />
+		</div>
+		<div class="content_wrap disnon">
+			<h2>エリア</h2>
+			<img src="img/test7.jpg" />
+		</div>
+	</div><!-- /#contents -->
+	<footer></footer>
+	<!-- <a href="http://tabelog.com"><img src="http://image.tabelog.com/images/banner/tabelog_api_135x17.gif" alt="食べログAPI" title="食べログAPI" border="0" /></a> -->
+</div>
 
-        <!--[if lt IE 9]>
-            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
-        <![endif]-->
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-
-        <script src="js/main.js"></script>
-
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
+<script src="js/vendor/jquery-1.9.1.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/tab.js"></script>
+<script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
 </html>

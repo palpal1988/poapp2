@@ -1,0 +1,90 @@
+@import "compass";
+
+body{
+	background: #1A1A1A;
+	font: 16px/20px "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",'メイリオ',Meiryo,Helvetica,Arial,Sans-Serif;
+	color: #FFF8F3;
+	margin: 0;
+}
+
+a {
+	//color: #69c;
+}
+a:hover {
+	//color:#069;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.disnon {
+	display: none;
+}
+
+#menu {
+	width: 240px;
+	float: left;
+	height: 720px;
+	background: #F23C50;
+	header {
+		height: 240px;
+		.logo {
+			margin: 0 auto;
+			text-align: center;
+			padding-top: 10px;
+		}
+	}
+
+	nav {
+		ul {
+			color: #FFF8F3;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				height: 50px;
+				line-height: 50px;
+				padding-left: 20px;
+				//@include background-image(linear-gradient(top,  #f6f8f9 0%, #e6ecee 52%, #d8dee3 53%, #f0f3f5 100%));
+			}
+			.select {
+				background: #202020;
+				color: #F23C50;
+			}
+		}
+	}
+
+	.search {
+		text-align: center;
+		padding-top: 50px;
+	}
+}
+
+.content_wrap {
+	width: 720px;
+	height: 720px;
+	float: left;
+	background: #202020;
+	h2 {
+		padding: 0 0 30px 100px;
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+$padding: 20px;
+
+.sample {
+	//@include border-radius();
+	//@include opacity(0.5);
+	//@include box-shadow(0 0 1px #ccc);
+	//@include rotate();
+	//@include clearfix();
+	width: image-width("test1.jpg") + ($padding * 2);
+}
+
+
