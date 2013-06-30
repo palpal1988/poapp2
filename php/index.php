@@ -1,12 +1,8 @@
 <?php
 header("Content-Type: text/html; charset=UTF-8");
-<<<<<<< HEAD
-include('apiPalpal.php');
-include('Storepalpal.php');
-=======
-include('test.php');
+
+include('ApiConnecter.php');
 include('Store.php');
->>>>>>> a82daf385ea993888b52a384c8b550956d77df77
 ?>
 <html>
 <head>
