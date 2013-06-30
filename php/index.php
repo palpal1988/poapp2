@@ -1,4 +1,5 @@
 <?php
+//テスト　中島
 header("Content-Type: text/html; charset=UTF-8");
 include('ApiConnecter.php');
 include('Store.php');
