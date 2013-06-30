@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 //テスト　中島
+=======
+黒田
+>>>>>>> 37b19dea5872d652d686b7970b689b253ea04915
 header("Content-Type: text/html; charset=UTF-8");
 include('ApiConnecter.php');
 include('Store.php');
