@@ -58,7 +58,8 @@ enctype="application/x-www-form-urlencoded">
 	}else{
 		$apiConnecter=new ApiConnecter();
 
-		echo $apiConnecter->connect();
+		// echo $apiConnecter->connect();
+		echo $apiConnecter->requestUrl;
 	}
 ?>
 </body>
