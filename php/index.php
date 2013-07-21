@@ -1,13 +1,22 @@
 <?php
 header("Content-Type: text/html; charset=UTF-8");
-
-include('ApiConnecter.php');
-include('Store.php');
+include_once('SetSearchAssumption.php');
+include_once('Store.php');
 ?>
 <html>
 <head>
 	<meta http-equiv="Content-Type content=text/html; charset=UTF-8">
 	<title>テスト用フォーム</title>
+	<script type="text/javascript">
+if (navigator.geolocation) {
+   navigator.geolocation.getCurrentPosition(function(position) {
+   s = position.coords.latitude+","+position.coords.longitude;
+    alert(s);
+ });
+} else {
+  alert("I'm sorry, but geolocation services are not supported by your browser.");
+}
+</script>
 </head>
 <body>
 <?php
@@ -18,8 +27,8 @@ include('Store.php');
 <form action="<?php echo basename(__FILE__) ?>" method="post"
 enctype="application/x-www-form-urlencoded">
 <input type="hidden" name="do" value="send" />
-<p>性別:<input type="radio" name="sex" value="male" checked>男
-<input type="radio" name="sex" value="female">女</p>
+<p>性別:<input type="radio" name="sex" value="1" checked>男
+<input type="radio" name="sex" value="2">女</p>
 <p>職業:<input type="radio" name="position" value="1" checked>会社員
 <input type="radio" name="position" value="2">主夫・主婦
 <input type="radio" name="position" value="3">大学生
@@ -35,20 +44,19 @@ enctype="application/x-www-form-urlencoded">
 </p>
 <p>目的:<input type="radio" name="purpose" value="1" checked>朝食
 <input type="radio" name="purpose" value="2">昼食
-<input type="radio" name="purpose" value="3">夕飯
+<input type="radio" name="purpose" value="3">夕食
 <input type="radio" name="purpose" value="4">飲み会・パーティ
 <input type="radio" name="purpose" value="5">合コン
-<input type="radio" name="purpose" value="6">お茶
-<input type="radio" name="purpose" value="7">記念日・特別な日
+<input type="radio" name="purpose" value="6">接待
+<input type="radio" name="purpose" value="7">お茶
+<input type="radio" name="purpose" value="8">記念日
 </p>
 何人でいくか:<input type="text" name="member" value="" />人
 </p>
 誰と行くか:<input type="radio" name="who" value="1" checked>友達・同僚
 <input type="radio" name="who" value="2">先輩
-<input type="radio" name="who" value="3">24〜29歳
-<input type="radio" name="who" value="4">30〜34歳
-<input type="radio" name="who" value="5">35〜39歳
-<input type="radio" name="who" value="6">40〜歳
+<input type="radio" name="who" value="3">恋人
+<input type="radio" name="who" value="4">家族
 </p>
 <p>
 どこに行くか:<input type="text" name="where" value="" >
@@ -57,10 +65,49 @@ enctype="application/x-www-form-urlencoded">
 </form>
 <?php
 	}else{
-		$apiConnecter=new ApiConnecter();
 
-		// echo $apiConnecter->connect();
-		echo $apiConnecter->requestUrl;
+		$setSearchAssumption=new SetSearchAssumption();
+
+		$postArray=array(
+			"sex"=>$_POST['sex'],
+			"position"=>$_POST['position'],
+			"age"=>$_POST['age'],
+			"purpose"=>$_POST['purpose'],
+			"member"=>$_POST['member'],
+			"who"=>$_POST['who'],
+			"where"=>$_POST['where']);
+
+		foreach($postArray as $postName=>$value){
+			$setSearchAssumption->setSimpleAssumption($postName,$value);
+		}
+		$setSearchAssumption->setComplexAssumption();
+		$storeInfo=$setSearchAssumption->startSearch();
+		//echo $setSearchAssumption->returnPram();
+
+		echo $storeInfo->getId()."</br>";
+		echo $storeInfo->getName()."</br>";
+		echo $storeInfo->getLatitude()."</br>";
+		echo $storeInfo->getLongitude()."</br>";
+		echo $storeInfo->getFwCategory()."</br>";
+		echo $storeInfo->getUrlPc()."</br>";
+		echo $storeInfo->getUrlMobile()."</br>";
+		echo $storeInfo->getImage1()."</br>";
+		echo $storeInfo->getImage2()."</br>";
+		echo $storeInfo->getQrCode()."</br>";
+		echo $storeInfo->getAdress()."</br>";
+		echo $storeInfo->getTel()."</br>";
+		echo $storeInfo->getFax()."</br>";
+		echo $storeInfo->getOpenTime()."</br>";
+		echo $storeInfo->getHoliday()."</br>";
+		echo $storeInfo->getStation()."</br>";
+		echo $storeInfo->getPrL()."</br>";
+		echo $storeInfo->getPrS()."</br>";
+		echo $storeInfo->getArea()."</br>";
+		echo $storeInfo->getPrefecture()."</br>";
+		echo $storeInfo->getCategory()."</br>";
+		echo $storeInfo->getBudget1()."</br>";
+		echo $storeInfo->getBudget2()."</br>";
+		echo $storeInfo->getEquipment();
 	}
 ?>
 </body>
