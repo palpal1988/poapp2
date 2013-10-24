@@ -266,7 +266,7 @@ input[type="text"] {
     font-size: 20px;
 }
 
-input[name="submit"] {
+input[name="searchButton"] {
     background: none repeat scroll 0 0 #4797F1;
     border: medium none;
     clear: both;
@@ -279,7 +279,7 @@ input[name="submit"] {
     width: 153px;
 }
 
-input[name="submit"]:hover {
+input[name="searchButton"]:hover {
     color: #fff;
     background: #1176E6;
 }

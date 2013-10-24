@@ -36,7 +36,7 @@
             <form action="result/" method="POST" id="form1">
                 <div class="searchForm">
                     <input type="text" id="searchBox" value="" name="searchBox" placeholder="">
-                    <input type="button" value="GO!" name="submit" onclick="codeAddress()">
+                    <input type="button" value="GO!" name="searchButton" class="searchButton" onclick="codeAddress()">
                 </div>
                 <input type="hidden" name="ido" id="ido" value="">
                 <input type="hidden" name="keido" id="keido" value="">
@@ -54,7 +54,7 @@
 
 <script src="../js/vendor/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<script src="common.js"></script>
+
 <script>
     var _gaq = [
         ['_setAccount', 'UA-XXXXX-X'],
@@ -102,10 +102,7 @@
 
                                 $("#ido").val(latlng.lat());
                                 $("#keido").val(latlng.lng());
-                                $('input[name="submit"]').click(function () {
-                                    alert('hi');
-                                    $("#form1").submit();
-                                });
+                                $("form").submit();
                             }
                         }
                         //map.fitBounds(bounds);
@@ -114,5 +111,6 @@
         }
     }
 </script>
+<script src="common.js"></script>
 </body>
 </html>

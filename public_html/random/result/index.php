@@ -26,7 +26,7 @@
     your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
     improve your experience.</p>
 <![endif]-->
-<?php var_dump($_POST) ?>
+
 <div id="container">
     <div id="main">
         <div class="inner">
