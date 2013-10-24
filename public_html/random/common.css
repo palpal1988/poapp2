@@ -170,6 +170,7 @@ input.btn {
 .error input {
     background: #FFCCCC;
 }
+
 p.error {
     color: #FF0000;
     font-weight: bold;
@@ -283,6 +284,7 @@ input[name="searchButton"]:hover {
     color: #fff;
     background: #1176E6;
 }
+
 #map_canvas {
     margin-top: 20px;
     display: none;
@@ -296,11 +298,13 @@ input[name="searchButton"]:hover {
     padding: 20px;
     position: relative;
 }
+
 .searchArea {
     text-align: right;
     font-size: 12px;
     padding-bottom: 3px;
 }
+
 #header {
     border-bottom: 1px solid #D1D2D5;
     height: 42px;
@@ -372,14 +376,14 @@ input[name="searchButton"]:hover {
 #content table td {
     border-bottom: 1px solid #DADBDE;
     line-height: 1.8;
-    padding: 5px 0 3px 5px;
+    padding: 5px 0 3px 8px;
 }
 
 #content table th {
     color: #FFFFFF;
     font-size: 12px;
-    font-weight: bold;
-    width: 105px;
+    font-weight: normal;
+    width: 77px;
     background: #4797F1;
 }
 
@@ -399,6 +403,7 @@ input[name="searchButton"]:hover {
 #content table td a:hover {
     color: #4eb8fa;
 }
+
 #map {
     margin-top: 20px;
 }
