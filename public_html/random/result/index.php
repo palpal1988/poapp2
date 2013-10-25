@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Firest Lite</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport"
+          content="width=device-width, maximum-scale=1.0, minimum-scale=0.5,user-scalable=yes,initial-scale=1.0"/>
     <link rel="shortcut icon" href=""/>
     <link rel="stylesheet" href="../common.css">
     <noscript>
@@ -43,6 +44,7 @@
                         <div class="address">東京都豊島区南池袋1-28-1 西武池袋本店 8F</div>
                         <div class="tel"><span>TEL</span>03-5953-3077</div>
                     </div>
+                    <div class="clear"></div>
                 </div>
                 <div id="content">
                     <div class="picture">

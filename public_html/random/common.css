@@ -152,6 +152,10 @@ input.btn {
     clear: both;
 }
 
+.clear {
+    clear: both
+}
+
 /* main -------------------------------------------------------------------------------*/
 
 #main {
@@ -183,7 +187,6 @@ p.error {
 /* Contents -------------------------------------------------------------------------------*/
 
 #content {
-    float: left;
     width: 100%;
     margin-bottom: 50px;
 }
@@ -312,7 +315,7 @@ input[name="searchButton"]:hover {
 ============================================================*/
 .info {
     background: #edeeee;
-    height: 878px;
+    height: 100%;
     padding: 10px 20px 20px;
     position: relative;
 }
@@ -325,8 +328,8 @@ input[name="searchButton"]:hover {
 
 #header {
     border-bottom: 1px solid #D1D2D5;
-    height: 42px;
-    padding: 9px 5px 0;
+    height: 100%;
+    padding: 9px 5px 5px;
     color: #ffffff;
     background: #4797F1;
 }
@@ -431,4 +434,18 @@ input[name="searchButton"]:hover {
 footer {
     float: right;
     margin-bottom: 20px;
+}
+
+/* responsive
+============================================================*/
+@media screen and (max-width:960px) {
+    #header .headerLeft {
+        width: 100%;
+    }
+
+    #header .headerRight {
+        float: left;
+        text-align: left;
+        width: 100%;
+    }
 }
