@@ -161,21 +161,23 @@ input.btn {
 }
 
 #main > .inner {
-    width: 660px;
+    width: 52.15%;
     margin: auto;
-    padding: 37px 0 0 0;
+    padding: 15px 0 0;
 }
 
 /* error -------------------------------------------------------------------------------*/
-.error input {
-    background: #FFCCCC;
+.error input[type=text] {
+    background: url("img/icon-search.png") no-repeat scroll 5px 8px #FFCCCC !important;
 }
 
 p.error {
     color: #FF0000;
     font-weight: bold;
-    margin: 0 auto 5px;
-    width: 44%;
+    margin-bottom: 3px;
+    margin-left: 19.5%;
+    width: auto;
+    text-align: left;
 }
 
 /* Contents -------------------------------------------------------------------------------*/
@@ -186,9 +188,13 @@ p.error {
     margin-bottom: 50px;
 }
 
+h1.logo {
+    margin: 0 0 5px 0px;
+}
+
 h2 {
     font-size: 16px;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 h2 span {
@@ -250,21 +256,32 @@ textarea {
     padding: 2px 0;
 }
 
+.focus {
+    color: #969696
+}
+
 /* 検索
 ============================================================*/
 input {
     margin: 0 auto 30px;
-    display: block;
+    /*display: block;*/
+}
+
+.searchForm {
+    text-align: center;
+    margin: 35px;
 }
 
 input[type="text"] {
     height: 32px;
-    padding: 0 5px;
+    padding: 0 0 0 25px;
     border: 1px solid #D1D2D4;
     border-radius: 2px;
-    /*min-width: 300px;*/
+    min-width: 125px;
     line-height: 32px;
     font-size: 20px;
+    background: url("img/icon-search.png") no-repeat scroll 5px 8px;
+    width: 40%;
 }
 
 input[name="searchButton"] {
@@ -274,10 +291,11 @@ input[name="searchButton"] {
     color: #FFFFFF;
     cursor: pointer;
     font-size: 19px;
-    height: 44px;
+    height: 34px;
     text-align: center;
     text-decoration: none;
-    width: 153px;
+    width: 13%;
+    min-width: 45px;
 }
 
 input[name="searchButton"]:hover {
@@ -295,7 +313,7 @@ input[name="searchButton"]:hover {
 .info {
     background: #edeeee;
     height: 878px;
-    padding: 20px;
+    padding: 10px 20px 20px;
     position: relative;
 }
 
@@ -389,7 +407,7 @@ input[name="searchButton"]:hover {
 
 #content table td {
     font-size: 12px;
-    font-weight: bold;
+    font-weight: normal;
     min-width: 200px;
     text-align: left;
     width: 400px;

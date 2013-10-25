@@ -30,6 +30,8 @@
 <div id="container">
     <div id="main">
         <div class="inner">
+            <h1 class="logo"><a href="../" title="トップ"><img src="../img/logo.png" alt="Firest"></a></h1>
+
             <div class="info ">
                 <div class="searchArea">検索エリア：<?php echo $_POST['searchBox'] ?></div>
                 <div id="header">
@@ -117,7 +119,7 @@ spn=0.013945,0.039396&amp;
 iwloc=A&amp;
 output=embed&amp;
 iwloc=B"
-                            height="300" width="620" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">
+                            height="300" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">
                         </iframe>
                         <small>
                             <a style="color: #0000ff; text-align: left;" href="https://maps.google.co.jp/maps?
