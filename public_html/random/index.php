@@ -38,8 +38,8 @@
                     <input type="text" id="searchBox" value="" name="searchBox" placeholder="">
                     <input type="button" value="GO!" name="searchButton" class="searchButton" onclick="codeAddress()">
                 </div>
-                <input type="hidden" name="ido" id="ido" value="">
-                <input type="hidden" name="keido" id="keido" value="">
+                <input type="hidden" name="latitude" id="latitude" value="">
+                <input type="hidden" name="longitude" id="longitude" value="">
 
                 <div id="map_canvas" style="width:500px; height:300px"></div>
             </form>

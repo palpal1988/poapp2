@@ -1,4 +1,41 @@
-<!DOCTYPE html>
+<?php
+header("Content-Type: text/html; charset=UTF-8");
+include_once('SetSearchAssumption.php');
+include_once('Store.php');
+
+function printStore($storeInfo){
+    echo $storeInfo->getId()."</br>";
+    echo $storeInfo->getNameKana()."</br>";
+    echo $storeInfo->getName()."</br>";
+    echo $storeInfo->getLatitude()."</br>";
+    echo $storeInfo->getLongitude()."</br>";
+    echo $storeInfo->getFwCategory()."</br>";
+    echo $storeInfo->getUrlPc()."</br>";
+    echo $storeInfo->getUrlMobile()."</br>";
+    echo $storeInfo->getImage1()."</br>";
+    echo $storeInfo->getImage2()."</br>";
+    echo $storeInfo->getQrCode()."</br>";
+    echo $storeInfo->getAdress()."</br>";
+    echo $storeInfo->getTel()."</br>";
+    echo $storeInfo->getFax()."</br>";
+    echo $storeInfo->getOpenTime()."</br>";
+    echo $storeInfo->getHoliday()."</br>";
+    echo $storeInfo->getStation()."</br>";
+    echo $storeInfo->getPrL()."</br>";
+    echo $storeInfo->getPrS()."</br>";
+    echo $storeInfo->getArea()."</br>";
+    echo $storeInfo->getPrefecture()."</br>";
+    echo $storeInfo->getCategory()."</br>";
+    echo $storeInfo->getBudget1()."</br>";
+    echo $storeInfo->getBudget2()."</br>";
+    echo $storeInfo->getEquipment();
+    }
+
+
+    $setSearchAssumption=new SetSearchAssumption();
+    $storeInfo=$setSearchAssumption->startSearch();
+
+?>
 <html lang="ja">
 <head>
     <meta charset="utf-8">
@@ -31,36 +68,36 @@
     <div id="main">
         <div class="inner">
             <div class="info ">
-                <div class="searchArea">検索エリア：<?php echo $_POST['searchBox'] ?></div>
+                <div class="searchArea">検索条件：<?php echo $_POST['searchBox'] ?></div>
                 <div id="header">
                     <div class="headerLeft">
-                        <div class="kana">ギンザビイドロ イケブクロテン</div>
-                        <h2>銀座びいどろ 池袋店</h2>
+                        <div class="kana"><?php echo $storeInfo->getNameKana() ?></div>
+                        <h2><?php echo $storeInfo->getName() ?></h2>
                     </div>
                     <div class="headerRight">
-                        <div class="address">東京都豊島区南池袋1-28-1 西武池袋本店 8F</div>
-                        <div class="tel"><span>TEL</span>03-5953-3077</div>
+                        <div class="address"><?php $storeInfo->getAdress() ?></div>
+                        <div class="tel"><span>TEL</span><?php $storeInfo->getTel() ?></div>
                     </div>
                 </div>
                 <div id="content">
                     <div class="picture">
                         <img
-                            src="http://image1-4.tabelog.k-img.com/restaurant/images/Rvw/12549/150x150_square_12549277.jpg"
-                            width="150" height="150" alt="">
+                            src=<?php echo "\"".$storeInfo->getImage1()."\"" ?>
+                            height="150" alt="">
                         <img
-                            src="http://image1-3.tabelog.k-img.com/restaurant/images/Rvw/12549/150x150_square_12549278.jpg"
-                            width="150" height="150" alt="">
-                        <img
+                            src=<?php echo "\"".$storeInfo->getImage1()."\"" ?>
+                            height="150" alt="">
+                       <!--  <img
                             src="http://image1-1.tabelog.k-img.com/restaurant/images/Rvw/22000/150x150_square_22000502.jpg"
                             width="150" height="150" alt="">
                         <img
                             src="http://image1-2.tabelog.k-img.com/restaurant/images/Rvw/22000/150x150_square_22000512.jpg"
-                            width="150" height="150" alt="">
+                            width="150" height="150" alt=""> -->
                     </div>
                     <table>
                         <tr>
                             <th>ジャンル</th>
-                            <td>スペイン料理</td>
+                            <td><?php echo $storeInfo->getCategory() ?></td>
                         </tr>
                         <tr>
                             <th>交通手段</th>
@@ -72,26 +109,25 @@
                         <tr>
                             <th>営業時間</th>
                             <td>
-                                [月～土] 11:00～23:00<br>
-                                [日・祝] 10:30～23:00<br>
-                                日曜営業
+                                <?php echo $storeInfo->getOpenTime() ?>
                             </td>
                         </tr>
                         <tr>
                             <th>定休日</th>
-                            <td>不定休</td>
+                            <td><?php echo $storeInfo->getHoliday() ?></td>
                         </tr>
                         <tr>
                             <th>平均予算</th>
-                            <td>[夜]￥4,000～￥4,999 [昼]￥1,000～￥1,999</td>
+                            <td><?php echo $storeInfo->getBudget1() ?></td>
+                            <td><?php echo $storeInfo->getBudget2() ?></td>
                         </tr>
                         <tr>
-                            <th>席数</th>
-                            <td>42席</td>
+                            <th>設備</th>
+                            <td><?php echo $storeInfo->getEquipment() ?></td>
                         </tr>
                         <tr>
                             <th>ホームページ</th>
-                            <td><a href="http://r.gnavi.co.jp/g095647/">http://r.gnavi.co.jp/g095647/</a></td>
+                            <td><a href=<?php echo "\"".$storeInfo->getUrlPc()."\"" ?>><?php echo $storeInfo->getUrlPc() ?></a></td>
                         </tr>
                     </table>
                     <div id="map">
