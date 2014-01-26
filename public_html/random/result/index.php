@@ -42,7 +42,8 @@ function printStore($storeInfo){
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Firest Lite</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport"
+          content="width=device-width, maximum-scale=1.0, minimum-scale=0.5,user-scalable=yes,initial-scale=1.0"/>
     <link rel="shortcut icon" href=""/>
     <link rel="stylesheet" href="../common.css">
     <noscript>
@@ -67,6 +68,8 @@ function printStore($storeInfo){
 <div id="container">
     <div id="main">
         <div class="inner">
+            <h1 class="logo"><a href="../" title="トップ"><img src="../img/logo.png" alt="Firest"></a></h1>
+
             <div class="info ">
                 <div class="searchArea">検索条件：<?php echo $_POST['searchBox'] ?></div>
                 <div id="header">
@@ -78,6 +81,7 @@ function printStore($storeInfo){
                         <div class="address"><?php $storeInfo->getAdress() ?></div>
                         <div class="tel"><span>TEL</span><?php $storeInfo->getTel() ?></div>
                     </div>
+                    <div class="clear"></div>
                 </div>
                 <div id="content">
                     <div class="picture">
@@ -153,7 +157,7 @@ spn=0.013945,0.039396&amp;
 iwloc=A&amp;
 output=embed&amp;
 iwloc=B"
-                            height="300" width="620" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">
+                            height="300" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">
                         </iframe>
                         <small>
                             <a style="color: #0000ff; text-align: left;" href="https://maps.google.co.jp/maps?
