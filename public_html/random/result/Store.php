@@ -149,6 +149,13 @@
 			$this->holiday=$holiday;
 		}
 
+		public function getStation(){
+			return $this->Station;
+		}
+		public function setStation($Station){
+			$this->Station=$Station;
+		}
+
 		public function getLine(){
 			return $this->line;
 		}
