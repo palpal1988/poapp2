@@ -89,11 +89,8 @@ class SetSearchAssumption {
 		}
 
 		$this->setStore($pageNum,$storeNum);
-<<<<<<< HEAD
-		echo $this->apiConnecter->getUrl(1);
-=======
+
 		// echo $this->apiConnecter->getUrl(1);
->>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
 		return $this->storeInfo;
 
 	}
@@ -108,27 +105,16 @@ class SetSearchAssumption {
 		$this->storeInfo->setLatitude($storeXml->rest[$storeNum]->latitude);
 		$this->storeInfo->setLongitude($storeXml->rest[$storeNum]->longitude);
 		$this->storeInfo->setFwCategory($storeXml->rest[$storeNum]->fwCategory);
-<<<<<<< HEAD
-		$this->storeInfo->setUrlPc($storeXml->rest[$storeNum]->url_pc);
-=======
 		$this->storeInfo->setUrlPc($storeXml->rest[$storeNum]->url);
->>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
 		$this->storeInfo->setUrlMobile($storeXml->rest[$storeNum]->url_mobile);
 		$this->storeInfo->setImage1($storeXml->rest[$storeNum]->image_url->shop_image1);
 		$this->storeInfo->setImage2($storeXml->rest[$storeNum]->image_url->shop_image2);
 		$this->storeInfo->setQrCode($storeXml->rest[$storeNum]->qrcode);
-<<<<<<< HEAD
-		$this->storeInfo->setAdress($storeXml->rest[$storeNum]->adress);
-=======
 		$this->storeInfo->setAddress($storeXml->rest[$storeNum]->address);
->>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
 		$this->storeInfo->setTel($storeXml->rest[$storeNum]->tel);
 		$this->storeInfo->setFax($storeXml->rest[$storeNum]->fax);
 		$this->storeInfo->setOpenTime($storeXml->rest[$storeNum]->opentime);
 		$this->storeInfo->setHoliday($storeXml->rest[$storeNum]->holiday);
-<<<<<<< HEAD
-		$this->storeInfo->setStation($storeXml->rest[$storeNum]->access->station);
-=======
 
 		$this->storeInfo->setLine($storeXml->rest[$storeNum]->access->line);
 		$this->storeInfo->setStation($storeXml->rest[$storeNum]->access->station);
@@ -136,17 +122,12 @@ class SetSearchAssumption {
 		$this->storeInfo->setWalk($storeXml->rest[$storeNum]->access->walk);
 		$this->storeInfo->setNote($storeXml->rest[$storeNum]->access->note);
 
->>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
 		$this->storeInfo->setPrL($storeXml->rest[$storeNum]->pr->pr_l);
 		$this->storeInfo->setPrS($storeXml->rest[$storeNum]->pr->pr_s);
 		$this->storeInfo->setArea($storeXml->rest[$storeNum]->code->areaname);
 		$this->storeInfo->setPrefecture($storeXml->rest[$storeNum]->code->prefname);
-<<<<<<< HEAD
-		$this->storeInfo->setCategory($storeXml->rest[$storeNum]->category_name_l);
-=======
 		$this->storeInfo->setCategoryL($storeXml->rest[$storeNum]->code->category_name_l);
 		$this->storeInfo->setCategoryS($storeXml->rest[$storeNum]->code->category_name_s);
->>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
 		$this->storeInfo->setBudget1($storeXml->rest[$storeNum]->budget);
 		$this->storeInfo->setBudget2($storeXml->rest[$storeNum]->budget);
 		$this->storeInfo->setEquipment($storeXml->rest[$storeNum]->equipment);

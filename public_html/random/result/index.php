@@ -34,14 +34,6 @@ function printStore($storeInfo){
 
     $setSearchAssumption=new SetSearchAssumption();
     $storeInfo=$setSearchAssumption->startSearch();
-
-<<<<<<< HEAD
-=======
-    echo $storeInfo->getLatitude();
-    echo ",";
-    echo $storeInfo->getLongitude();
-
->>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
 ?>
 <html lang="ja">
 <head>
@@ -85,13 +77,8 @@ function printStore($storeInfo){
                         <h2><?php echo $storeInfo->getName() ?></h2>
                     </div>
                     <div class="headerRight">
-<<<<<<< HEAD
-                        <div class="address"><?php $storeInfo->getAdress() ?></div>
-                        <div class="tel"><span>TEL</span><?php $storeInfo->getTel() ?></div>
-=======
                         <div class="address"><?php echo $storeInfo->getAddress() ?></div>
                         <div class="tel"><span>TEL</span><?php echo $storeInfo->getTel() ?></div>
->>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -113,11 +100,7 @@ function printStore($storeInfo){
                     <table>
                         <tr>
                             <th>ジャンル</th>
-<<<<<<< HEAD
-                            <td><?php echo $storeInfo->getCategory() ?></td>
-=======
                             <td><?php echo $storeInfo->getCategoryL() ?>　<?php echo $storeInfo->getCategoryS() ?></td>
->>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
                         </tr>
                         <tr>
                             <th>交通手段</th>
@@ -140,12 +123,7 @@ function printStore($storeInfo){
                         </tr>
                         <tr>
                             <th>平均予算</th>
-<<<<<<< HEAD
-                            <td><?php echo $storeInfo->getBudget1() ?></td>
-                            <td><?php echo $storeInfo->getBudget2() ?></td>
-=======
                             <td><?php echo $storeInfo->getBudget1() ?>円<br></td>
->>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
                         </tr>
                         <tr>
                             <th>設備</th>
