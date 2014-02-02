@@ -35,6 +35,13 @@ function printStore($storeInfo){
     $setSearchAssumption=new SetSearchAssumption();
     $storeInfo=$setSearchAssumption->startSearch();
 
+<<<<<<< HEAD
+=======
+    echo $storeInfo->getLatitude();
+    echo ",";
+    echo $storeInfo->getLongitude();
+
+>>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
 ?>
 <html lang="ja">
 <head>
@@ -42,7 +49,8 @@ function printStore($storeInfo){
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Firest Lite</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport"
+          content="width=device-width, maximum-scale=1.0, minimum-scale=0.5,user-scalable=yes,initial-scale=1.0"/>
     <link rel="shortcut icon" href=""/>
     <link rel="stylesheet" href="../common.css">
     <noscript>
@@ -67,6 +75,8 @@ function printStore($storeInfo){
 <div id="container">
     <div id="main">
         <div class="inner">
+            <h1 class="logo"><a href="../" title="トップ"><img src="../img/logo.png" alt="Firest"></a></h1>
+
             <div class="info ">
                 <div class="searchArea">検索条件：<?php echo $_POST['searchBox'] ?></div>
                 <div id="header">
@@ -75,9 +85,15 @@ function printStore($storeInfo){
                         <h2><?php echo $storeInfo->getName() ?></h2>
                     </div>
                     <div class="headerRight">
+<<<<<<< HEAD
                         <div class="address"><?php $storeInfo->getAdress() ?></div>
                         <div class="tel"><span>TEL</span><?php $storeInfo->getTel() ?></div>
+=======
+                        <div class="address"><?php echo $storeInfo->getAddress() ?></div>
+                        <div class="tel"><span>TEL</span><?php echo $storeInfo->getTel() ?></div>
+>>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
                     </div>
+                    <div class="clear"></div>
                 </div>
                 <div id="content">
                     <div class="picture">
@@ -97,13 +113,19 @@ function printStore($storeInfo){
                     <table>
                         <tr>
                             <th>ジャンル</th>
+<<<<<<< HEAD
                             <td><?php echo $storeInfo->getCategory() ?></td>
+=======
+                            <td><?php echo $storeInfo->getCategoryL() ?>　<?php echo $storeInfo->getCategoryS() ?></td>
+>>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
                         </tr>
                         <tr>
                             <th>交通手段</th>
                             <td>
-                                JR　地下鉄　【池袋駅】から徒歩1分　駅直結西武池袋店内<br>
-                                池袋駅から163m
+                                <?php echo $storeInfo->getLine() ?>
+                                <?php echo $storeInfo->getStation() ?>
+                                <?php echo $storeInfo->getStation_exit() ?>
+                                <?php echo $storeInfo->getWalk() ?>
                             </td>
                         </tr>
                         <tr>
@@ -118,8 +140,12 @@ function printStore($storeInfo){
                         </tr>
                         <tr>
                             <th>平均予算</th>
+<<<<<<< HEAD
                             <td><?php echo $storeInfo->getBudget1() ?></td>
                             <td><?php echo $storeInfo->getBudget2() ?></td>
+=======
+                            <td><?php echo $storeInfo->getBudget1() ?>円<br></td>
+>>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
                         </tr>
                         <tr>
                             <th>設備</th>
@@ -134,45 +160,29 @@ function printStore($storeInfo){
                         <iframe
                             src="https://maps.google.co.jp/maps?
 f=q&amp;
+q=<?php echo $storeInfo->getLatitude() ?>,<?php echo $storeInfo->getLongitude() ?>&amp;
 hl=ja&amp;
-q=%E3%80%92107-0062+%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E5%8D%97%E9%9D%92%E5%B1%B12-11-16+METLIFE%E3%83%93%E3%83%AB&amp;
 t=m&amp;
 ie=UTF8&amp;
 oe=UTF8&amp;
-ll=35.732021,139.71242&amp;
-sspn=47.10617,93.076172&amp;
-z=14&amp;
+ll=<?php echo $storeInfo->getLatitude() ?>,<?php echo $storeInfo->getLongitude() ?>&amp;
+z=16&amp;
 source=s_q&amp;
-geocode=&amp;
-aq=&amp;
-sll=35.732021,139.71242&amp;
-brcurrent=3,0x60188b6298e9424f:0xa2b8c41f6740576f,0&amp;
-hq=&amp;
-hnear=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E5%8D%97%E9%9D%92%E5%B1%B1%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%91%E2%88%92%EF%BC%91%EF%BC%96+%EF%BC%AD%EF%BC%A5%EF%BC%B4%EF%BC%AC%EF%BC%A9%EF%BC%A6%EF%BC%A5%E9%9D%92%E5%B1%B1%E3%83%93%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;
-spn=0.013945,0.039396&amp;
 iwloc=A&amp;
 output=embed&amp;
 iwloc=B"
-                            height="300" width="620" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">
+                            height="300" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">
                         </iframe>
                         <small>
                             <a style="color: #0000ff; text-align: left;" href="https://maps.google.co.jp/maps?
 f=q&amp;
+q=<?php echo $storeInfo->getLatitude() ?>,<?php echo $storeInfo->getLongitude() ?>&amp;
 source=embed&amp;
 hl=ja&amp;
-geocode=&amp;
-q=%E3%80%92107-0062+%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E5%8D%97%E9%9D%92%E5%B1%B12-11-16+METLIFE%E3%83%93%E3%83%AB&amp;
-aq=&amp;
-sll=34.728949,138.455511&amp;
-sspn=47.10617,93.076172&amp;
-brcurrent=3,0x60188b6298e9424f:0xa2b8c41f6740576f,0&amp;
 ie=UTF8&amp;
-hq=&amp;
-hnear=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E5%8D%97%E9%9D%92%E5%B1%B1%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%91%E2%88%92%EF%BC%91%EF%BC%96+%EF%BC%AD%EF%BC%A5%EF%BC%B4%EF%BC%AC%EF%BC%A9%EF%BC%A6%EF%BC%A5%E9%9D%92%E5%B1%B1%E3%83%93%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;
 t=m&amp;
-ll=35.732021,139.71242&amp;
-spn=0.013945,0.039396&amp;
-z=14&amp;
+ll=<?php echo $storeInfo->getLatitude() ?>,<?php echo $storeInfo->getLongitude() ?>&amp;
+z=16&amp;
 iwloc=A">大きな地図で見る</a>
                         </small>
                     </div>

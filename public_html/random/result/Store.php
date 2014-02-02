@@ -12,17 +12,36 @@
 		private $image1=null;
 		private $image2=null;
 		private $qr_code=null;
+<<<<<<< HEAD
 		private $adress=null;
+=======
+		private $address=null;
+>>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
 		private $tel=null;
 		private $fax=null;
 		private $opentime=null;
 		private $holiday=null;
+<<<<<<< HEAD
 		private $station=null;
+=======
+
+		private $line=null;
+		private $station=null;
+		private $station_exit=null;
+		private $walk=null;
+		private $note=null;
+
+>>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
 		private $pr_l=null;
 		private $pr_s=null;
 		private $area=null;
 		private $prefecture=null;
+<<<<<<< HEAD
 		private $category=null;
+=======
+		private $categoryL=null;
+		private $categoryS=null;
+>>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
 		private $budget1=null;
 		private $budget2=null;
 		private $equipment=null;
@@ -105,11 +124,19 @@
 			$this->qr_code=$qr_code;
 		}
 
+<<<<<<< HEAD
 		public function getAdress(){
 			return $this->adress;
 		}
 		public function setAdress($adress){
 			$this->adress=$adress;
+=======
+		public function getAddress(){
+			return $this->address;
+		}
+		public function setAddress($address){
+			$this->address=$address;
+>>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
 		}
 
 		public function getTel(){
@@ -140,6 +167,16 @@
 			$this->holiday=$holiday;
 		}
 
+<<<<<<< HEAD
+=======
+		public function getLine(){
+			return $this->line;
+		}
+		public function setLine($line){
+			$this->line=$line;
+		}
+
+>>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
 		public function getStation(){
 			return $this->station;
 		}
@@ -147,6 +184,30 @@
 			$this->station=$station;
 		}
 
+<<<<<<< HEAD
+=======
+		public function getStation_exit(){
+			return $this->station_exit;
+		}
+		public function setStation_exit($station_exit){
+			$this->station_exit=$station_exit;
+		}
+
+		public function getWalk(){
+			return $this->walk;
+		}
+		public function setWalk($walk){
+			$this->walk=$walk;
+		}
+
+		public function getNote(){
+			return $this->note;
+		}
+		public function setNote($note){
+			$this->note=$note;
+		}
+
+>>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
 		public function getPrL(){
 			return $this->pr_l;
 		}
@@ -174,11 +235,26 @@
 		public function setPrefecture($prefecture){
 			$this->prefecture=$prefecture;
 		}
+<<<<<<< HEAD
 		public function getCategory(){
 			return $this->category;
 		}
 		public function setCategory($category){
 			$this->category=$category;
+=======
+		public function getCategoryL(){
+			return $this->categoryL;
+		}
+		public function setCategoryL($categoryL){
+			$this->categoryL=$categoryL;
+		}
+
+		public function getCategoryS(){
+			return $this->categoryS;
+		}
+		public function setCategoryS($categoryS){
+			$this->categoryS=$categoryS;
+>>>>>>> 37b55c0512bf19923a35437be2856da34e335d6f
 		}
 
 		public function getBudget1(){

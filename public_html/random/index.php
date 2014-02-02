@@ -30,12 +30,13 @@
 <div id="container">
     <div id="main">
         <div class="inner">
+            <h1 class="logo"><a href="" title="トップ"><img src="img/logo.png" alt="Firest"></a></h1>
             <noscript>
                 <p>JavaScriptが無効です。</p>
             </noscript>
-            <form action="result/" method="POST" id="form1">
+            <form action="result/index.php" method="POST" id="form1">
                 <div class="searchForm">
-                    <input type="text" id="searchBox" value="" name="searchBox" placeholder="">
+                    <input type="text" id="searchBox" value="エリア・駅名" name="searchBox" class="focus">
                     <input type="button" value="GO!" name="searchButton" class="searchButton" onclick="codeAddress()">
                 </div>
                 <input type="hidden" name="latitude" id="latitude" value="">
@@ -100,8 +101,8 @@
                                     position: latlng, map: map
                                 });
 
-                                $("#ido").val(latlng.lat());
-                                $("#keido").val(latlng.lng());
+                                $("#latitude").val(latlng.lat());
+                                $("#longitude").val(latlng.lng());
                                 $("form").submit();
                             }
                         }
